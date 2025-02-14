@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <P class="logo"><b style="color: red;">D</b>ivya sri</P>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Frontend Developer(Fresher)</p>  
+                <h1>Hello,I'm <span>Divya Sri</span> From India (Andhra pradesh)</h1>
+            </div>
+        </div>
+    </div>
+    <!--about me -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/image1.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-tittle">About me</h1>
+                    <p>As a motivated and enthusiastic fresher freelancer, I'm excited to offer my Frontend development
+                        services to clients looking for innovative and cost-effective solutions. With a strong foundation
+                        in HTML, CSS, and JavaScript,react.js, I'm eager to apply my skills and knowledge to real-world projects
+                        and continue learning and growing as a professional. I'm a quick learner and I'm confident 
+                        that my fresh perspective and enthusiasm would be a great asset to your project. I'm looking forward
+                         to collaborating with clients who can provide guidance and support as I continue to develop my skills
+                         and build my portfolio.</p>
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')" >Education</p>
+                         </div>
+                         <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>HTML</span><br>Formating Web Content</li>
+                                <li><span>CSS</span><br>Designing and styling responsive wedsites</li>
+                                <li><span>JavaScript,react.js</span><br>Creating dynamic and interactive wed experiences</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2022-2026</span><br>Pursing BTECH[ECE-3rd year] in DVR & HS MIC COLLEGE OF TECHNOLOGY ,kanchikacherla</li>
+                                <li><span>2020-2022</span><br>Intermediate-Sri Akashra College,kanchikacherla</li>
+                                <li><span>2020</span><br>Vijay Rani High School,kanchikacherla</li>
+                            </ul>
+                         </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------services----------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-tittle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>HTML\CSS Development</h2>
+                    <p>Building semantic and responsive HTML structures with CSS styling.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>JavaScript ,react.js</h2>
+                    <p>Crecting interactive and dynamic Frontend pages with react.js</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-file"></i>
+                    <h2>Responsive Design</h2>
+                    <p>Ensuring interfaces adapt to different screen sizes and devices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------portfolio--------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-tittle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="image/image2.png" alt="" width="300px"  height="500px">
+                    <div class="layer">
+                        <h2>Rock The Resume</h2>
+                        <p>Developed a resume by utilizing HTML and CSS to create a visully stunning resumes</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/image3.png" alt="" width="300px"  height="500px" object-fit="cover">
+                    <div class="layer">
+                        <h2>Interactive web Project</h2>
+                        <p>Developed a trio of interactive web applications using HTML,
+                             CSS, and JavaScript, including a To-Do List, Weather App,
+                              and Digital Clock, showcasing my proficiency in front-end development.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/image4.png" alt="" width="300px"  height="500px">
+                    <div class="layer">
+                        <h2>E-commerce Website</h2>
+                    <p>Designed and developed a responsive E-commerce website using react.js demonstrating my ability to craft fast, functional, 
+                         and user-friendly web experiences.</p>
+                         <a href=""><i class="fas fa-external-link-alt"></i></a>
+                    </div>     
+                </div>
+            </div>
+            <a href="https://e-commerce-wedsite.onrender.com/" class="btn">Click here</a>
+        </div>
+    </div>
+    <!-------contact--------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-tittle">Contact Me</h1>
+                    <p> <i class="fa-solid fa-envelope"></i> divyasriyadava@gmail.com</p>
+                    <p> <i class="fa-solid fa-phone-square-alt"></i> 6300214751</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name='submit-to-google-sheet'>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Emali" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <p>I am grateful<i class="fa-regular fa-handshake"></i> for the chance to collaborate
+                with you and deliver a successful project </p>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents =document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }   
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById('sidemenu');
+        function openmenu() {
+            sidemenu.style.right="0";
+        }
+        function closemenu() {  
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwY_WOmf3TiyyQWio2ZdDqQjnuWDgtmU-WpSdbU634pUZYz7RNv8Rycu9wWbBvdEED6/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent sucessfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
