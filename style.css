@@ -8,8 +8,8 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: black;
-    color:white;
+    background: #ffcb9a;
+    color:#111;
 }
 /* #header {
     width: 100%;
@@ -23,13 +23,13 @@ nav {
     display: flex; /*this will place the tags  side by side evenly*/
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;/*this will place the tags with with place evenly as per the content required*/
+    flex-wrap: wrap;/*this will place the tags with with place evenly as per the content requi#111*/
 }
 .logo {
     padding-top: 10px;
     width: 170px;
     height: 70px;
-    font-size: 40px;
+    font-size: 33px;
 }
 nav ul li {
     display:inline-block; /*this will place the list items at the one line  as vertical to horizantially*/
@@ -37,7 +37,7 @@ nav ul li {
     margin: 10px 20px;
 }
 nav ul li a{
-    color: white;
+    color: #111;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -46,11 +46,12 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background-color: red;
+    background-color: #111;
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 0.5s;
+    transition: 0.9s;
+ 
 }
 
 nav ul li a:hover::after {
@@ -59,35 +60,78 @@ nav ul li a:hover::after {
 .header-text {
     margin-top: 20%;
     font-size: 30px;
+    animation-delay: 0.5s;
+    
+}
+.header-text h1:hover {
+    -webkit-text-stroke: 3px #111;
+    color: transparent;
 }
 .header-text h1 {
     font-size: 60px;
     margin-top: 20px;
 }
-.header-text h1 span {
-    color: red;
+
+.header-text h1 .anims {
+    color: white;
+    position: relative;
+    background-image: linear-gradient(#fff,pink);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -750px 0;
+    
 }
+@keyframes back {
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
 /*-----------------about me----------*/
 #about {
     padding: 80px;
-    color: #ababab;
+    color: #111;
+    animation-delay:0.8s;
 }
 .row {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
 }
 .about-col-1 {
     flex-basis: 35%; /*in this the width of the image will be 35%*/
+    border-radius: 50px;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 .about-col-1 img {
     width: 100%;
-    border-radius: 15px;
-    box-shadow: 1px 2px 4px white;
+    border-radius: 50%;
+    border-top-right-radius: 1%;
+    border-bottom-left-radius: 1%;  
+    animation-name: image;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; 
+    animation: image 1s infinite ease-in-out;
+    box-shadow: 10px 10px 10px  hwb(144 24% 75%);
+    
 }
+@keyframes image {
+    0%, 100% { transform: translateY(20PX); }
+    50% { transform: translateY(100px);}
+  }
+  .about-col-1 hr {
+    border: 2px solid #111;
+    margin-top:100px;
+    border-radius: 50%;
+  }
+
+
 /*and the space between the both the about-col-1 and 2 will be the 5% only*/
 .about-col-2 {
-    flex-basis: 60%;  /*in this the width of the image will be 60% */
+    flex-basis: 60%;  /*in this the width of the content will be 60% */
+    
 }
 .sub-tittle {
     font-size: 45px;
@@ -110,7 +154,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: red;
+    background: #111;
     position: absolute;
     left:0;
     bottom: -8px;
@@ -124,7 +168,7 @@ nav ul li a:hover::after {
     margin: 10px 0;
 }
 .tab-contents ul li span {
-    color: #ff004f;
+    color: white;
     font-size: 14px;
 }
 .tab-contents {
@@ -144,12 +188,13 @@ nav ul li a:hover::after {
     margin-top: 50px;
 }
 .services-list div {
-    background: #262626;
+    box-shadow: 10px 10px 30px  hwb(144 24% 75%);
+    background: #dba573;
     padding: 40px;
     font-size: 13px;
     font-weight: 500;
     border-radius: 10px;
-    transition: background 0.5s transfrom 0.5s;
+    transition: 0.55;
 }
 .services-list div i{
     font-size: 50px;
@@ -164,8 +209,9 @@ nav ul li a:hover::after {
     font-size: 16px;
 }
 .services-list div:hover {
-    background: #f80854ef;
-    transform: translateY(-10px);
+    background: #111;
+    color: white;
+    transform: translateY(-19px);
 }
 #portfolio {
     padding: 50px 0;
@@ -175,6 +221,7 @@ nav ul li a:hover::after {
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-gap:40px;
     margin-top: 50px;
+    border-radius: 10px;
 }
 .work {
     border-radius: 10px;
@@ -182,19 +229,26 @@ nav ul li a:hover::after {
     overflow: hidden;
 }
 .work img {
+   
+    box-shadow: 10px 10px 30px  hwb(144 24% 75%);
     width: 100%;
-    border-radius: 10px;
+    border-radius: 50%;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    background-size: cover;
+    background-position: center;
     display: block;
     transition: transform 0.5s;
 }
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6),#ff004f); /*which is having the 50% of the opacity by the #ff04f*/
+    background: linear-gradient(rgba(0,0,0,0.6),#111); /*which is having the 50% of the opacity by the #ff04f*/
+    color: white;
     border-radius: 10px;
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -203,7 +257,7 @@ nav ul li a:hover::after {
     padding: 0 40px;
     text-align: center;/*allthe text lines at the sameline as the center*/
     font-size: 14px;
-    transition:  height 0.5s;
+    transition:  height 0.9s;
 }
 .layer h3 {
     font-weight: 500;
@@ -211,12 +265,12 @@ nav ul li a:hover::after {
 }
 .layer a {
     margin-top: 20px;
-    color: #ff004f;
+    color: white;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;/*by this it will take the max/ormin heigthof the a img tag so that the will be placed by decresing or increscing the line heigth ac
     compareed to the width and heigth their eill be change in the palcing the item*/
-    background: white;
+    background: #111;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -232,14 +286,18 @@ nav ul li a:hover::after {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #111;
     padding: 14px 50px;
-    border-radius: 6px;
+    border-radius: 50px;
+    border-top-right-radius: 0%;
+    border-bottom-left-radius: 0%;
     text-decoration: none;
     color: white;
+    box-shadow: 2px 2px 2px #111;
 }
 .btn:hover {
-    background: #ff004f;
+    color: white;
+    background:#111;
 }
 /*--------contact-----------*/
 .contact-left {
@@ -252,7 +310,7 @@ nav ul li a:hover::after {
     margin-top: 30px;
 }
 .contact-left p i {
-    color: #ff004f;
+    color: #111;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -263,16 +321,32 @@ nav ul li a:hover::after {
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #ababab;
+    margin-bottom: 30px;
+    color: white;
     display: inline-block;
     transition: transform 0.5s;
+    animation-name: bounce;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; 
+    animation: bounce 1s infinite ease-in-out;
+
 }
+@keyframes bounce {
+    0%, 100% { transform: translateY(10PX); }
+    50% { transform: translateY(10px); }
+  }
 .social-icons a:hover {
-    color: #ff004f;
+    color: #111;
     transform: translateY(-5px);
 }
 .contact-right form {
     width: 100%;
+}
+input::placeholder {
+    color: white;
+}
+textarea::placeholder {
+    color: white;
 }
 form input ,form textarea {
     width: 100%;
@@ -290,7 +364,7 @@ form .btn {
 }
 form .btn2 {
     color: white;
-    background: #ff004f;
+    background:#603309;
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
@@ -300,18 +374,48 @@ form .btn2 {
     text-align: center;
     width: 100%;
     padding: 25px;
+    color: white;
     background: #262626;
     font-weight: 300;
     margin-top: 20px;
 }
 .copy-right i {
-    color: #ff004f;
+    color: white;
     font-size: 15px;
     padding: 0 3px 0 3px;
+}
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 /*-----------media quires*/
 nav .fa-solid {
     display: none;
+}
+@media only screen and (max-width:1300px), (max-width:1200px),(max-width:1100px),(max-width:1000px) {
+    .about-col-1 img {
+        width: 100%;
+        border-radius: 50%;
+        border-top-right-radius: 1%;
+        border-bottom-left-radius: 1%;  
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-iteration-count: infinite; 
+        animation: bounce 1s infinite ease-in-out;
+        box-shadow: 10px 10px 10px  hwb(144 24% 75%);
+        
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateY(20PX); }
+        50% { transform: translateY(10px);}
+      }
 }
 @media only screen and (max-width:600px){
     .header-text {
@@ -329,7 +433,8 @@ nav .fa-solid {
         font-size: 30px;
     }
     nav ul {
-        background: #ff004f;
+        background: #111;
+        color: white;
         position: fixed;
         top: 0;
         right: -200px; /*this background and the content will be hidden by the right:-200px*/
@@ -339,7 +444,11 @@ nav .fa-solid {
         z-index: 2;
         transition:  right 0.5s;
     } 
+    nav ul li a {
+        color: white;
+    }
     nav ul li {
+        color: white;
         display: block;
         margin: 25px;
     }
@@ -349,6 +458,22 @@ nav .fa-solid {
         left: 25px;
         cursor: pointer;
     }
+    .about-col-1 img {
+        width: 100%;
+        border-radius: 50%;
+        border-top-right-radius: 1%;
+        border-bottom-left-radius: 1%;  
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-iteration-count: infinite; 
+        animation: bounce 1s infinite ease-in-out;
+        box-shadow: 10px 10px 10px  hwb(144 24% 75%);
+        
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateY(20PX); }
+        50% { transform: translateY(10px);}
+      }
     .sub-tittle {
         font-size: 40px;
     }
@@ -359,7 +484,7 @@ nav .fa-solid {
         margin-bottom: 30px;
     }
     .about-col-2 p{
-        font-size: 17px;
+        font-size: 19px;
         font-weight: 500;
     }
     .tab-links {
@@ -377,4 +502,10 @@ nav .fa-solid {
     color: #61b752;
     margin-top: -20px;
     display: block;
+}
+@media only screen and (max-width:500px) {
+    .about-col-2 p {
+        margin: 2px 3px 2px 3px;
+        padding: 2px 3px 2px 3px;
+    }
 }
